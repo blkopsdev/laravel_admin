@@ -41,6 +41,16 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
         }
       }
     })
+    .state('home', {
+      url: '/home',
+      views: {
+        'layout': {
+          templateUrl: getView('home')
+        },
+        'header@app': {},
+        'footer@app': {}
+      },
+    })
     .state('app.tablessimple', {
       url: '/tables-simple',
       data: {
