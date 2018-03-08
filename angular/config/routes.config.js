@@ -30,8 +30,19 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
         bodyClass: 'hold-transition skin-blue sidebar-mini'
       }
     })
-    .state('app.landing', {
+    .state('app.home', {
       url: '/',
+      data: {
+        auth: false
+      },
+      views: {
+        'main@app': {
+          templateUrl: getView('home')
+        }
+      }
+    })
+    .state('app.landing', {
+      url: '/dashboard',
       data: {
         auth: true
       },
@@ -42,7 +53,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
       }
     })
     .state('app.tablessimple', {
-      url: '/tables-simple',
+      url: '/dashboard/tables-simple',
       data: {
         auth: true
       },
@@ -53,7 +64,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
       }
     })
     .state('app.uiicons', {
-      url: '/ui-icons',
+      url: '/dashboard/ui-icons',
       data: {
         auth: true
       },
@@ -64,7 +75,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
       }
     })
     .state('app.uimodal', {
-      url: '/ui-modal',
+      url: '/dashboard/ui-modal',
       data: {
         auth: true
       },
@@ -75,7 +86,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
       }
     })
     .state('app.uitimeline', {
-      url: '/ui-timeline',
+      url: '/dashboard/ui-timeline',
       data: {
         auth: true
       },
@@ -86,7 +97,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
       }
     })
     .state('app.uibuttons', {
-      url: '/ui-buttons',
+      url: '/dashboard/ui-buttons',
       data: {
         auth: true
       },
@@ -97,7 +108,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
       }
     })
     .state('app.uigeneral', {
-      url: '/ui-general',
+      url: '/dashboard/ui-general',
       data: {
         auth: true
       },
@@ -108,7 +119,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
       }
     })
     .state('app.formsgeneral', {
-      url: '/forms-general',
+      url: '/dashboard/forms-general',
       data: {
         auth: true
       },
@@ -119,7 +130,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
       }
     })
     .state('app.chartjs', {
-      url: '/charts-chartjs',
+      url: '/dashboard/charts-chartjs',
       data: {
         auth: true
       },
@@ -130,7 +141,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
       }
     })
     .state('app.comingsoon', {
-      url: '/comingsoon',
+      url: '/dashboard/comingsoon',
       data: {
         auth: true
       },
@@ -141,7 +152,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
       }
     })
     .state('app.profile', {
-      url: '/profile',
+      url: '/dashboard/profile',
       data: {
         auth: true
       },
@@ -155,7 +166,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
       }
     })
     .state('app.userlist', {
-      url: '/user-lists',
+      url: '/dashboard/user-lists',
       data: {
         auth: true
       },
@@ -166,7 +177,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
       }
     })
     .state('app.useredit', {
-      url: '/user-edit/:userId',
+      url: '/dashboard/user-edit/:userId',
       data: {
         auth: true
       },
@@ -181,7 +192,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
       }
     })
     .state('app.userroles', {
-      url: '/user-roles',
+      url: '/dashboard/user-roles',
       data: {
         auth: true
       },
@@ -192,7 +203,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
       }
     })
     .state('app.userpermissions', {
-      url: '/user-permissions',
+      url: '/dashboard/user-permissions',
       data: {
         auth: true
       },
@@ -203,7 +214,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
       }
     })
     .state('app.userpermissionsadd', {
-      url: '/user-permissions-add',
+      url: '/dashboard/user-permissions-add',
       data: {
         auth: true
       },
@@ -217,7 +228,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
       }
     })
     .state('app.userpermissionsedit', {
-      url: '/user-permissions-edit/:permissionId',
+      url: '/dashboard/user-permissions-edit/:permissionId',
       data: {
         auth: true
       },
@@ -232,7 +243,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
       }
     })
     .state('app.userrolesadd', {
-      url: '/user-roles-add',
+      url: '/dashboard/user-roles-add',
       data: {
         auth: true
       },
@@ -246,7 +257,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
       }
     })
     .state('app.userrolesedit', {
-      url: '/user-roles-edit/:roleId',
+      url: '/dashboard/user-roles-edit/:roleId',
       data: {
         auth: true
       },
@@ -261,7 +272,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
       }
     })
     .state('app.widgets', {
-      url: '/widgets',
+      url: '/dashboard/widgets',
       data: {
         auth: true
       },
